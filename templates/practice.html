@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            performance_query();
+        });
+
+        function performance_query() {
+            let word = 'apple';
+            let api_key = '8c74dfe6-26a5-4ced-b5c7-b504e1a754cc';
+            url = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=${api_key}`
+            $.ajax({
+                type: 'GET',
+                url: url,
+                data: {},
+                success: function(response){
+                    console.log(response);
+                }
+
+            })
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+password = 'zullarfn123'
+cxn_str = f'mongodb+srv://zullarfn:{password}@cluster0.nhlkqvs.mongodb.net/?retryWrites=true&w=majority'
+client = MongoClient(cxn_str)
+
+db = client.dbsparta_plus_week2
